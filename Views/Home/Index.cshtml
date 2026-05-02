@@ -1,0 +1,247 @@
+@model CVData
+@{ ViewData["Title"] = "CV"; }
+
+<!-- ═══ NAVBAR ═══ -->
+<nav class="navbar" id="navbar">
+    <a class="nav-logo" href="#hero">JC</a>
+    <ul class="nav-links">
+        <li><a href="#sobre-mi">Sobre mí</a></li>
+        <li><a href="#habilidades">Habilidades</a></li>
+        <li><a href="#formacion">Formación</a></li>
+        <li><a href="#proyectos">Proyectos</a></li>
+        <li><a href="#contacto">Contacto</a></li>
+    </ul>
+    <button class="nav-toggle" id="navToggle" aria-label="Menú">
+        <i class="fa-solid fa-bars"></i>
+    </button>
+</nav>
+
+<!-- ═══ HERO ═══ -->
+<section class="hero" id="hero">
+    <div class="hero-bg-grid"></div>
+    <div class="hero-orb hero-orb-1"></div>
+    <div class="hero-orb hero-orb-2"></div>
+
+    <div class="hero-content fade-in">
+        <span class="hero-badge">
+            <i class="fa-solid fa-circle-dot pulse"></i>&nbsp; Disponible para trabajar
+        </span>
+        <h1 class="hero-name">@Model.Name</h1>
+        <p class="hero-title" id="typedTitle"></p>
+        <p class="hero-sub">@Model.Subtitle</p>
+        <div class="hero-actions">
+            <a href="#proyectos" class="btn btn-primary">
+                <i class="fa-solid fa-code"></i> Ver proyectos
+            </a>
+            <a href="#contacto" class="btn btn-outline">
+                <i class="fa-solid fa-paper-plane"></i> Contacto
+            </a>
+        </div>
+        <div class="hero-scroll-hint">
+            <i class="fa-solid fa-chevron-down bounce"></i>
+        </div>
+    </div>
+</section>
+
+<!-- ═══ SOBRE MÍ ═══ -->
+<section class="section" id="sobre-mi">
+    <div class="container">
+        <div class="section-header fade-up">
+            <span class="section-tag">Sobre mí</span>
+            <h2 class="section-title">¿Quién soy?</h2>
+        </div>
+        <div class="about-grid fade-up">
+            <div class="about-avatar">
+                <div class="avatar-wrapper">
+                    <img class="avatar-img" src="~/images/profile.jpg" alt="Jorge Ariel Chaile"
+                         onerror="this.outerHTML='<div class=\'avatar-placeholder\'><i class=\'fa-solid fa-user\'></i></div>'" />
+                </div>
+                <div class="about-contact-chips">
+                    <a href="mailto:@Model.Email" class="chip">
+                        <i class="fa-solid fa-envelope"></i> @Model.Email
+                    </a>
+                    <a href="tel:@Model.Phone" class="chip">
+                        <i class="fa-solid fa-phone"></i> @Model.Phone
+                    </a>
+                    <span class="chip">
+                        <i class="fa-solid fa-location-dot"></i> Argentina
+                    </span>
+                </div>
+            </div>
+            <div class="about-text">
+                <p>@Model.ProfileDescription</p>
+                <div class="personal-skills">
+                    @foreach (var ps in Model.PersonalSkills)
+                    {
+                        <span class="personal-skill-badge">
+                            <i class="fa-solid fa-check"></i> @ps
+                        </span>
+                    }
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ═══ HABILIDADES ═══ -->
+<section class="section section-dark" id="habilidades">
+    <div class="container">
+        <div class="section-header fade-up">
+            <span class="section-tag">Habilidades</span>
+            <h2 class="section-title">Stack tecnológico</h2>
+        </div>
+
+        <div class="skills-grid fade-up">
+            @foreach (var cat in Model.SkillCategories)
+            {
+                <div class="skill-category-card">
+                    <h3 class="skill-cat-title">@cat.Category</h3>
+                    <div class="skill-badges">
+                        @foreach (var skill in cat.Skills)
+                        {
+                            <div class="skill-badge" style="--skill-color: @skill.Color">
+                                <i class="@skill.IconClass skill-icon" style="color: @skill.Color"></i>
+                                <span>@skill.Name</span>
+                            </div>
+                        }
+                    </div>
+                </div>
+            }
+        </div>
+    </div>
+</section>
+
+<!-- ═══ FORMACIÓN ═══ -->
+<section class="section" id="formacion">
+    <div class="container">
+        <div class="section-header fade-up">
+            <span class="section-tag">Formación</span>
+            <h2 class="section-title">Educación & Cursos</h2>
+        </div>
+
+        <div class="timeline fade-up">
+            <!-- Universidad -->
+            <div class="timeline-item">
+                <div class="timeline-icon">
+                    <i class="fa-solid fa-university"></i>
+                </div>
+                <div class="timeline-card">
+                    <span class="timeline-tag">Universidad</span>
+                    <h3>@Model.Degree</h3>
+                    <p class="timeline-place">@Model.University</p>
+                    <span class="timeline-status">@Model.DegreeStatus</span>
+                </div>
+            </div>
+
+            <!-- Cursos -->
+            @foreach (var course in Model.Courses)
+            {
+                <div class="timeline-item">
+                    <div class="timeline-icon">
+                        <i class="@course.Icon colored-icon"></i>
+                    </div>
+                    <div class="timeline-card">
+                        <span class="timeline-tag">Curso</span>
+                        <h3>@course.Name</h3>
+                        <p class="timeline-place">@course.Platform</p>
+                        <div class="timeline-meta">
+                            @if (!string.IsNullOrEmpty(course.Date))
+                            {
+                                <span class="timeline-chip"><i class="fa-regular fa-calendar"></i> @course.Date</span>
+                            }
+                            @if (!string.IsNullOrEmpty(course.Hours))
+                            {
+                                <span class="timeline-chip"><i class="fa-regular fa-clock"></i> @course.Hours</span>
+                            }
+                            @if (!string.IsNullOrEmpty(course.CertificateUrl))
+                            {
+                                <a href="@course.CertificateUrl" target="_blank" rel="noopener" class="cert-link">
+                                    <i class="fa-solid fa-certificate"></i> Ver certificado
+                                </a>
+                            }
+                        </div>
+                    </div>
+                </div>
+            }
+        </div>
+    </div>
+</section>
+
+<!-- ═══ PROYECTOS ═══ -->
+<section class="section section-dark" id="proyectos">
+    <div class="container">
+        <div class="section-header fade-up">
+            <span class="section-tag">Proyectos</span>
+            <h2 class="section-title">Lo que construí</h2>
+        </div>
+
+        <div class="projects-grid fade-up">
+            @foreach (var project in Model.Projects)
+            {
+                <div class="project-card">
+                    <div class="project-icon">
+                        <i class="fa-solid @project.Icon"></i>
+                    </div>
+                    <h3 class="project-name">@project.Name</h3>
+                    <p class="project-desc">@project.Description</p>
+                    <div class="project-tech">
+                        @foreach (var tech in project.Technologies)
+                        {
+                            <span class="tech-tag">@tech</span>
+                        }
+                    </div>
+                    <a href="@project.GitHubUrl" target="_blank" rel="noopener" class="project-link">
+                        <i class="devicon-github-original"></i> Ver en GitHub
+                        <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                    </a>
+                </div>
+            }
+        </div>
+    </div>
+</section>
+
+<!-- ═══ CONTACTO ═══ -->
+<section class="section" id="contacto">
+    <div class="container">
+        <div class="section-header fade-up">
+            <span class="section-tag">Contacto</span>
+            <h2 class="section-title">Hablemos</h2>
+            <p class="section-desc">Estoy abierto a oportunidades laborales y colaboraciones.</p>
+        </div>
+
+        <div class="contact-grid fade-up">
+            <a href="https://www.linkedin.com/in/jorge-ariel-chaile-072294261" target="_blank" rel="noopener"
+               class="contact-card contact-linkedin">
+                <i class="fa-brands fa-linkedin"></i>
+                <span class="contact-label">LinkedIn</span>
+                <span class="contact-handle">jorge-ariel-chaile</span>
+            </a>
+
+            <a href="@Model.GitHubUrl" target="_blank" rel="noopener"
+               class="contact-card contact-github">
+                <i class="fa-brands fa-github"></i>
+                <span class="contact-label">GitHub</span>
+                <span class="contact-handle">jchaile2014</span>
+            </a>
+
+            <a href="@Model.InstagramUrl" target="_blank" rel="noopener"
+               class="contact-card contact-instagram">
+                <i class="fa-brands fa-instagram"></i>
+                <span class="contact-label">Instagram</span>
+                <span class="contact-handle">@@tu_usuario</span>
+            </a>
+
+            <a href="mailto:@Model.Email" class="contact-card contact-email">
+                <i class="fa-solid fa-envelope"></i>
+                <span class="contact-label">Email</span>
+                <span class="contact-handle">@Model.Email</span>
+            </a>
+        </div>
+    </div>
+</section>
+
+<!-- ═══ FOOTER ═══ -->
+<footer class="footer">
+    <p>Diseñado y desarrollado por <strong>Jorge Ariel Chaile</strong> · @DateTime.Now.Year</p>
+    <p class="footer-tech">ASP.NET Core · C# · CSS · JavaScript</p>
+</footer>

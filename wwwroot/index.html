@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Jorge Ariel Chaile – CV</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" />
+    <link rel="stylesheet" href="css/site.css" />
+</head>
+<body>
+
+<!-- ═══ NAVBAR ═══ -->
+<nav class="navbar" id="navbar">
+    <a class="nav-logo" href="#hero">JC</a>
+    <ul class="nav-links">
+        <li><a href="#sobre-mi">Sobre mí</a></li>
+        <li><a href="#habilidades">Habilidades</a></li>
+        <li><a href="#formacion">Formación</a></li>
+        <li><a href="#proyectos">Proyectos</a></li>
+        <li><a href="#contacto">Contacto</a></li>
+    </ul>
+    <button class="nav-toggle" id="navToggle" aria-label="Menú">
+        <i class="fa-solid fa-bars"></i>
+    </button>
+</nav>
+
+<!-- ═══ HERO ═══ -->
+<section class="hero" id="hero">
+    <div class="hero-bg-grid"></div>
+    <div class="hero-orb hero-orb-1"></div>
+    <div class="hero-orb hero-orb-2"></div>
+    <div class="hero-content fade-in">
+        <span class="hero-badge">
+            <i class="fa-solid fa-circle-dot pulse"></i>&nbsp; Disponible para trabajar
+        </span>
+        <h1 class="hero-name">Jorge Ariel Chaile</h1>
+        <p class="hero-title" id="typedTitle"></p>
+        <p class="hero-sub">Estudiante Técnico en Programación · UTN</p>
+        <div class="hero-actions">
+            <a href="#proyectos" class="btn btn-primary">
+                <i class="fa-solid fa-code"></i> Ver proyectos
+            </a>
+            <a href="#contacto" class="btn btn-outline">
+                <i class="fa-solid fa-paper-plane"></i> Contacto
+            </a>
+        </div>
+        <div class="hero-scroll-hint">
+            <i class="fa-solid fa-chevron-down bounce"></i>
+        </div>
+    </div>
+</section>
+
+<!-- ═══ SOBRE MÍ ═══ -->
+<section class="section" id="sobre-mi">
+    <div class="container">
+        <div class="section-header fade-up">
+            <span class="section-tag">Sobre mí</span>
+            <h2 class="section-title">¿Quién soy?</h2>
+        </div>
+        <div class="about-grid fade-up">
+            <div class="about-avatar">
+                <div class="avatar-wrapper">
+                    <img class="avatar-img" src="images/profile.jpg" alt="Jorge Ariel Chaile"
+                         onerror="this.outerHTML='<div class=\'avatar-placeholder\'><i class=\'fa-solid fa-user\'></i></div>'" />
+                </div>
+                <div class="about-contact-chips">
+                    <a href="mailto:jchaile2014@gmail.com" class="chip">
+                        <i class="fa-solid fa-envelope"></i> jchaile2014@gmail.com
+                    </a>
+                    <a href="tel:+543834722027" class="chip">
+                        <i class="fa-solid fa-phone"></i> +54 3834 722027
+                    </a>
+                    <span class="chip">
+                        <i class="fa-solid fa-location-dot"></i> Argentina
+                    </span>
+                </div>
+            </div>
+            <div class="about-text">
+                <p>Estudiante avanzado de Técnico Universitario en Programación (UTN), orientado al desarrollo con C# y .NET.
+                Cuento con sólidos conocimientos en programación orientada a objetos, desarrollo de interfaces de escritorio
+                con WinForms/WPF y manejo de bases de datos con MySQL y SQL Server. Incorporo herramientas de Inteligencia
+                Artificial en mi flujo de desarrollo para escribir, revisar y optimizar código de forma más eficiente.
+                Busco mi primera oportunidad formal en IT para aplicar y seguir desarrollando mis habilidades.</p>
+                <div class="personal-skills">
+                    <span class="personal-skill-badge"><i class="fa-solid fa-check"></i> Trabajo en equipo y colaboración</span>
+                    <span class="personal-skill-badge"><i class="fa-solid fa-check"></i> Organización y gestión del tiempo</span>
+                    <span class="personal-skill-badge"><i class="fa-solid fa-check"></i> Autonomía y toma de decisiones</span>
+                    <span class="personal-skill-badge"><i class="fa-solid fa-check"></i> Aprendizaje continuo y adaptabilidad</span>
+                    <span class="personal-skill-badge"><i class="fa-solid fa-check"></i> Integración de IA en el flujo de trabajo</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ═══ HABILIDADES ═══ -->
+<section class="section section-dark" id="habilidades">
+    <div class="container">
+        <div class="section-header fade-up">
+            <span class="section-tag">Habilidades</span>
+            <h2 class="section-title">Stack tecnológico</h2>
+        </div>
+        <div class="skills-grid fade-up">
+
+            <div class="skill-category-card">
+                <h3 class="skill-cat-title">Lenguajes</h3>
+                <div class="skill-badges">
+                    <div class="skill-badge" style="--skill-color:#9b59b6"><i class="devicon-csharp-plain skill-icon" style="color:#9b59b6"></i><span>C#</span></div>
+                    <div class="skill-badge" style="--skill-color:#e74c3c"><i class="devicon-java-plain skill-icon" style="color:#e74c3c"></i><span>Java</span></div>
+                    <div class="skill-badge" style="--skill-color:#2980b9"><i class="devicon-cplusplus-plain skill-icon" style="color:#2980b9"></i><span>C++</span></div>
+                </div>
+            </div>
+
+            <div class="skill-category-card">
+                <h3 class="skill-cat-title">Frameworks &amp; UI</h3>
+                <div class="skill-badges">
+                    <div class="skill-badge" style="--skill-color:#512bd4"><i class="devicon-dotnetcore-plain skill-icon" style="color:#512bd4"></i><span>.NET</span></div>
+                    <div class="skill-badge" style="--skill-color:#00adef"><i class="devicon-windows8-original skill-icon" style="color:#00adef"></i><span>WinForms</span></div>
+                    <div class="skill-badge" style="--skill-color:#68217a"><i class="devicon-dotnetcore-plain skill-icon" style="color:#68217a"></i><span>WPF</span></div>
+                </div>
+            </div>
+
+            <div class="skill-category-card">
+                <h3 class="skill-cat-title">Bases de Datos</h3>
+                <div class="skill-badges">
+                    <div class="skill-badge" style="--skill-color:#cc2927"><i class="devicon-microsoftsqlserver-plain skill-icon" style="color:#cc2927"></i><span>SQL Server</span></div>
+                    <div class="skill-badge" style="--skill-color:#00758f"><i class="devicon-mysql-plain skill-icon" style="color:#00758f"></i><span>MySQL</span></div>
+                </div>
+            </div>
+
+            <div class="skill-category-card">
+                <h3 class="skill-cat-title">Herramientas</h3>
+                <div class="skill-badges">
+                    <div class="skill-badge" style="--skill-color:#f34f29"><i class="devicon-git-plain skill-icon" style="color:#f34f29"></i><span>Git</span></div>
+                    <div class="skill-badge" style="--skill-color:#ffffff"><i class="devicon-github-original skill-icon" style="color:#ffffff"></i><span>GitHub</span></div>
+                    <div class="skill-badge" style="--skill-color:#5c2d91"><i class="devicon-visualstudio-plain skill-icon" style="color:#5c2d91"></i><span>Visual Studio</span></div>
+                </div>
+            </div>
+
+            <div class="skill-category-card">
+                <h3 class="skill-cat-title">Inteligencia Artificial</h3>
+                <div class="skill-badges">
+                    <div class="skill-badge" style="--skill-color:#00d4ff"><i class="fa-solid fa-brain skill-icon" style="color:#00d4ff"></i><span>AI-Assisted Dev</span></div>
+                    <div class="skill-badge" style="--skill-color:#a78bfa"><i class="fa-solid fa-wand-magic-sparkles skill-icon" style="color:#a78bfa"></i><span>Prompt Engineering</span></div>
+                    <div class="skill-badge" style="--skill-color:#f59e0b"><i class="fa-solid fa-robot skill-icon" style="color:#f59e0b"></i><span>Claude (Anthropic)</span></div>
+                </div>
+            </div>
+
+            <div class="skill-category-card">
+                <h3 class="skill-cat-title">Idiomas</h3>
+                <div class="skill-badges">
+                    <div class="skill-badge" style="--skill-color:#10b981"><i class="fa-solid fa-language skill-icon" style="color:#10b981"></i><span>Español (nativo)</span></div>
+                    <div class="skill-badge" style="--skill-color:#3b82f6"><i class="fa-solid fa-globe skill-icon" style="color:#3b82f6"></i><span>Inglés (básico)</span></div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<!-- ═══ FORMACIÓN ═══ -->
+<section class="section" id="formacion">
+    <div class="container">
+        <div class="section-header fade-up">
+            <span class="section-tag">Formación</span>
+            <h2 class="section-title">Educación &amp; Cursos</h2>
+        </div>
+        <div class="timeline fade-up">
+
+            <div class="timeline-item">
+                <div class="timeline-icon"><i class="fa-solid fa-university"></i></div>
+                <div class="timeline-card">
+                    <span class="timeline-tag">Universidad</span>
+                    <h3>Técnico Universitario en Programación</h3>
+                    <p class="timeline-place">Universidad Tecnológica Nacional – UTN Regional Pacheco</p>
+                    <span class="timeline-status">Cursando último año</span>
+                </div>
+            </div>
+
+            <div class="timeline-item">
+                <div class="timeline-icon"><i class="devicon-csharp-plain colored-icon"></i></div>
+                <div class="timeline-card">
+                    <span class="timeline-tag">Curso</span>
+                    <h3>C# Nivel 1 – Programación desde Cero</h3>
+                    <p class="timeline-place">Maxi Programa</p>
+                    <div class="timeline-meta">
+                        <span class="timeline-chip"><i class="fa-regular fa-calendar"></i> Enero 2026</span>
+                        <span class="timeline-chip"><i class="fa-regular fa-clock"></i> 60 hs</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="timeline-item">
+                <div class="timeline-icon"><i class="devicon-csharp-plain colored-icon"></i></div>
+                <div class="timeline-card">
+                    <span class="timeline-tag">Curso</span>
+                    <h3>C# Nivel 2 – POO + .NET + SQL</h3>
+                    <p class="timeline-place">Maxi Programa</p>
+                    <div class="timeline-meta">
+                        <span class="timeline-chip"><i class="fa-regular fa-calendar"></i> Abril 2026</span>
+                        <span class="timeline-chip"><i class="fa-regular fa-clock"></i> 60 hs</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="timeline-item">
+                <div class="timeline-icon"><i class="fa-solid fa-diagram-project colored-icon"></i></div>
+                <div class="timeline-card">
+                    <span class="timeline-tag">Curso</span>
+                    <h3>Introducción a los Algoritmos</h3>
+                    <p class="timeline-place">TodoCode Academy</p>
+                    <div class="timeline-meta">
+                        <a href="https://todocodeacademy.com/certificate/introduccion-a-los-algoritmos-hnn/" target="_blank" rel="noopener" class="cert-link">
+                            <i class="fa-solid fa-certificate"></i> Ver certificado
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="timeline-item">
+                <div class="timeline-icon"><i class="devicon-mysql-plain colored-icon"></i></div>
+                <div class="timeline-card">
+                    <span class="timeline-tag">Curso</span>
+                    <h3>Bases de Datos Relacionales con MySQL</h3>
+                    <p class="timeline-place">TodoCode Academy</p>
+                    <div class="timeline-meta">
+                        <a href="https://todocodeacademy.com/certificate/bd-relacionales-con-mysql-3cs/" target="_blank" rel="noopener" class="cert-link">
+                            <i class="fa-solid fa-certificate"></i> Ver certificado
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="timeline-item">
+                <div class="timeline-icon"><i class="devicon-git-plain colored-icon"></i></div>
+                <div class="timeline-card">
+                    <span class="timeline-tag">Curso</span>
+                    <h3>Git y GitHub</h3>
+                    <p class="timeline-place">TodoCode Academy</p>
+                    <div class="timeline-meta">
+                        <a href="https://todocodeacademy.com/certificate/git-y-github-0ou/" target="_blank" rel="noopener" class="cert-link">
+                            <i class="fa-solid fa-certificate"></i> Ver certificado
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="timeline-item">
+                <div class="timeline-icon"><i class="devicon-java-plain colored-icon"></i></div>
+                <div class="timeline-card">
+                    <span class="timeline-tag">Curso</span>
+                    <h3>Java para Principiantes</h3>
+                    <p class="timeline-place">TodoCode Academy</p>
+                    <div class="timeline-meta">
+                        <a href="https://todocodeacademy.com/certificate/java-para-principiantes-bpu/" target="_blank" rel="noopener" class="cert-link">
+                            <i class="fa-solid fa-certificate"></i> Ver certificado
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="timeline-item">
+                <div class="timeline-icon"><i class="devicon-dotnetcore-plain colored-icon"></i></div>
+                <div class="timeline-card">
+                    <span class="timeline-tag">Curso</span>
+                    <h3>Programación Orientada a Objetos con C#</h3>
+                    <p class="timeline-place">UTN – Formación académica</p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<!-- ═══ PROYECTOS ═══ -->
+<section class="section section-dark" id="proyectos">
+    <div class="container">
+        <div class="section-header fade-up">
+            <span class="section-tag">Proyectos</span>
+            <h2 class="section-title">Lo que construí</h2>
+        </div>
+        <div class="projects-grid fade-up">
+
+            <div class="project-card">
+                <div class="project-icon"><i class="fa-solid fa-database"></i></div>
+                <h3 class="project-name">Sistema de Gestión de Artículos</h3>
+                <p class="project-desc">Aplicación WinForms en C# con arquitectura en 3 capas (Presentación, Negocio, Dominio)
+                y base de datos SQL Server. Trabajo práctico grupal en el marco de UTN.</p>
+                <div class="project-tech">
+                    <span class="tech-tag">C#</span>
+                    <span class="tech-tag">.NET</span>
+                    <span class="tech-tag">WinForms</span>
+                    <span class="tech-tag">SQL Server</span>
+                    <span class="tech-tag">ADO.NET</span>
+                </div>
+                <a href="https://github.com/jchaile2014/tp-winform-equipo-22C" target="_blank" rel="noopener" class="project-link">
+                    <i class="devicon-github-original"></i> Ver en GitHub <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                </a>
+            </div>
+
+            <div class="project-card">
+                <div class="project-icon"><i class="fa-solid fa-calculator"></i></div>
+                <h3 class="project-name">Calculadora de Consola con Historial</h3>
+                <p class="project-desc">Aplicación de consola en C# / .NET 10 con operaciones matemáticas,
+                validación de entradas y persistencia del historial con timestamp en archivo de texto.</p>
+                <div class="project-tech">
+                    <span class="tech-tag">C#</span>
+                    <span class="tech-tag">.NET 10</span>
+                    <span class="tech-tag">Consola</span>
+                    <span class="tech-tag">File I/O</span>
+                </div>
+                <a href="https://github.com/jchaile2014/Calculadora_Basica" target="_blank" rel="noopener" class="project-link">
+                    <i class="devicon-github-original"></i> Ver en GitHub <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                </a>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<!-- ═══ CONTACTO ═══ -->
+<section class="section" id="contacto">
+    <div class="container">
+        <div class="section-header fade-up">
+            <span class="section-tag">Contacto</span>
+            <h2 class="section-title">Hablemos</h2>
+            <p class="section-desc">Estoy abierto a oportunidades laborales y colaboraciones.</p>
+        </div>
+        <div class="contact-grid fade-up">
+            <a href="https://www.linkedin.com/in/jorge-ariel-chaile-072294261" target="_blank" rel="noopener" class="contact-card contact-linkedin">
+                <i class="fa-brands fa-linkedin"></i>
+                <span class="contact-label">LinkedIn</span>
+                <span class="contact-handle">jorge-ariel-chaile</span>
+            </a>
+            <a href="https://github.com/jchaile2014" target="_blank" rel="noopener" class="contact-card contact-github">
+                <i class="fa-brands fa-github"></i>
+                <span class="contact-label">GitHub</span>
+                <span class="contact-handle">jchaile2014</span>
+            </a>
+            <a href="https://www.instagram.com/jorgechaile" target="_blank" rel="noopener" class="contact-card contact-instagram">
+                <i class="fa-brands fa-instagram"></i>
+                <span class="contact-label">Instagram</span>
+                <span class="contact-handle">@jorgechaile</span>
+            </a>
+            <a href="mailto:jchaile2014@gmail.com" class="contact-card contact-email">
+                <i class="fa-solid fa-envelope"></i>
+                <span class="contact-label">Email</span>
+                <span class="contact-handle">jchaile2014@gmail.com</span>
+            </a>
+        </div>
+    </div>
+</section>
+
+<!-- ═══ FOOTER ═══ -->
+<footer class="footer">
+    <p>Diseñado y desarrollado por <strong>Jorge Ariel Chaile</strong> · 2026</p>
+    <p class="footer-tech">ASP.NET Core · C# · CSS · JavaScript</p>
+</footer>
+
+<script src="js/site.js"></script>
+</body>
+</html>
